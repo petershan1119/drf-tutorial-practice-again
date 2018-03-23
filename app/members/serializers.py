@@ -6,7 +6,12 @@ from snippets.models import Snippet
 User = get_user_model()
 
 class UserSerializer(serializers.ModelSerializer):
-    snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Snippet.objects.all())
+    # snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Snippet.objects.all())
+    snippets = serializers.HyperlinkedRelatedField(
+        view_name='snippets:snippet-detail',
+        many=True,
+        read_only=True,
+    )
     class Meta:
         model = User
         fields = (
