@@ -96,10 +96,6 @@ from ..serializers import SnippetSerializer
 #         snippet.delete()
 #         return Response(status=status.HTTP_204_NO_CONTENT)
 
-__all__ = (
-    'SnippetList',
-    'SnippetDetail',
-)
 
 class SnippetList(APIView):
     def get(self, request, format=None):

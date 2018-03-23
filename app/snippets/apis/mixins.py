@@ -4,6 +4,12 @@ from ..models import Snippet
 from ..serializers import SnippetSerializer
 
 
+__all__ = (
+    'SnippetList',
+    'SnippetDetail',
+)
+
+
 class SnippetList(mixins.ListModelMixin,
                   mixins.CreateModelMixin,
                   generics.GenericAPIView):
