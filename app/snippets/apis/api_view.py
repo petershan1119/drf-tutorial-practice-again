@@ -9,8 +9,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.generics import get_object_or_404
 
-from .models import Snippet
-from .serializers import SnippetSerializer
+from ..models import Snippet
+from ..serializers import SnippetSerializer
 
 # 1. 시리얼라이저를 사용하는 Django 뷰 만들기
 # class JSONResponse(HttpResponse):
